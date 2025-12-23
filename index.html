@@ -1,110 +1,274 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV - Vương Thành Ân</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Vương Thành Ân</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- PDF LIB -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- PDF LIB -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
-  <!-- JS -->
-  <script src="script.js" defer></script>
-</head>
+    <!-- JS -->
+    <script src="script.js" defer></script>
+  </head>
 
-<body>
+  <body>
+    <div class="cv">
+      <!-- LEFT COLUMN -->
+      <aside class="left">
+        <img src="images/avatar.jpg" alt="Avatar" class="avatar" />
 
-  <div class="cv">
-    <!-- LEFT COLUMN -->
-    <aside class="left">
-      <img src="images/avatar.jpg" alt="Avatar" class="avatar" />
+        <div class="block">
+          <h3>Contact</h3>
+          <div class="info-item">📞 0906 462 961</div>
+          <div class="info-item">✉️ thanhanforjob@gmail.com</div>
+          <div class="info-item">📍 Hồ Chí Minh, Việt Nam</div>
+        </div>
 
-      <div class="block">
-        <h3>Thông tin cá nhân</h3>
-        <div class="info-item">📞 0906 462 961</div>
-        <div class="info-item">✉️ thanhanforjob@gmail.com</div>
-        <div class="info-item">📍 Hồ Chí Minh, Việt Nam</div>
-      </div>
-
-      <div class="block">
-        <h3>Kỹ năng</h3>
-        <ul class="skills">
-          <li>Game Development</li>
-          <li>Unity (C#), Unreal Engine (C++)</li>
-          <li>Shader Graph, DOTS, ECS</li>
-          <li>API Integration</li>
-          <li>Git, Agile</li>
-        </ul>
-      </div>
-
-      <div class="block">
-        <h3>Sở thích</h3>
-        <div class="info-item">Du lịch – Fencing – Vẽ</div>
-      </div>
-    </aside>
-
-    <!-- RIGHT COLUMN -->
-    <main class="right">
-      <h1 class="name">Vương Thành Ân</h1>
-      <div class="title">Game Developer</div>
-
-      <p class="summary">
-        Take advantage of my working skills & experience to become a professional developer and bring value to the company.
-        I am open-minded, enthusiastic about learning, and able to work under high pressure.
-      </p>
-
-      <div class="section">
-        <h2>Dự án</h2>
-
-        <div class="item">
-          <div class="item-title">PlayAd – Mobile Games</div>
-          <div class="time">2024 – Present</div>
-          <ul>
-            <li>Nut Guardian, Racing Master</li>
-            <li>Stick Man Legend, Sandwich Master</li>
-            <li>Frosty Drill, Space Chasing</li>
+        <div class="block">
+          <h3>Programming Languages</h3>
+          <ul class="block">
+            <li>C#</li>
+            <li>Lua</li>
+            <li>C++</li>
           </ul>
         </div>
 
-        <div class="item">
-          <div class="item-title">Space Falcon Studio</div>
-          <div class="time">2022 – 2024</div>
-          <ul>
-            <li>Aviatrix</li>
-            <li>Second Mobile Game</li>
+        <div class="block">
+          <h3>Game Engines</h3>
+          <ul class="block">
+            <li>Unity</li>
+            <li>Unreal Engine</li>
           </ul>
         </div>
-      </div>
 
-      <div class="section">
-        <h2>Personal Projects</h2>
-        <ul>
-          <li>Halfwish – Freelancing Project</li>
-          <li>Solar System Simulation</li>
-          <li>Math & Equation Solver</li>
-        </ul>
-      </div>
-
-      <div class="section">
-        <h2>Học vấn</h2>
-        <div class="item">
-          <div class="item-title">University Of Science</div>
-          <div class="time">2015 – 2019</div>
-          <div>Bachelor Degree</div>
+        <div class="block">
+          <h3>Design Patterns</h3>
+          <ul class="block">
+            <li>Singleton</li>
+            <li>Dependency Injection</li>
+            <li>State Machine</li>
+            <li>Signal Bus</li>
+            <li>Object Pooling</li>
+            <li>Observer</li>
+          </ul>
         </div>
-      </div>
-    </main>
-  </div>
 
-  <!-- DOWNLOAD PDF -->
-  <div style="text-align:center; margin: 30px;">
-    <button id="download-pdf" style="padding:10px 20px; font-size:16px;">
-      Download CV as PDF
-    </button>
-  </div>
+        <div class="block">
+          <h3>Unity Tools & Tech</h3>
+          <ul class="block">
+            <li>Profiling & Debugging</li>
+            <li>Shader Graph</li>
+            <li>Unity Editor Scripting (Custom Inspectors & Internal Tools)</li>
+            <li>Addressables</li>
+            <li>Sprite Atlas</li>
+            <li>UniTask</li>
+            <li>UniRx</li>
+            <li>DOTS, ECS</li>
+          </ul>
+        </div>
 
-</body>
+        <div class="block">
+          <h3>Version Control & Development Process</h3>
+          <ul class="block">
+            <li>Git (branching, code review)</li>
+            <li>Agile Development (Scrum)</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Interests</h3>
+          <div class="info-item">Travel – HEMA Fencing – 3D Arts</div>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <main class="right">
+        <h1 class="name">Vương Thành Ân</h1>
+        <div class="title">Unity Developer</div>
+
+        <p class="summary">
+          I aim to apply my skills and experience to build gameplay systems that
+          are stable, scalable, and feel right to players. I am open-minded,
+          eager to learn, and comfortable working under tight deadlines in
+          iterative development cycles.
+        </p>
+
+        <div class="section">
+          <h2>Dự án</h2>
+
+          <div class="item">
+            <div class="item-title">PlayAd – Mobile Games</div>
+            <div class="time">2024 – Present</div>
+            <ul>
+              <div class="project">
+                <div class="project-header">
+                  <h3 class="project-title">Racing Master</h3>
+                  <span class="project-role">Game Developer (Unity)</span>
+                </div>
+
+                <ul class="project-desc">
+                  <li>
+                    Developed and maintained core gameplay features for a mobile
+                    racing game using Unity.
+                  </li>
+                  <li>
+                    Implemented Addressables to deliver game content remotely
+                    for testing and live updates, significantly reducing initial
+                    build size.
+                  </li>
+                  <li>
+                    Used Addressables for on-demand asset loading, preventing
+                    scenes from loading excessive objects and improving scene
+                    load stability.
+                  </li>
+                  <li>
+                    Optimized race environments by converting terrain into
+                    custom meshes with reduced vertex counts.
+                  </li>
+                  <li>
+                    Split large environment meshes into smaller chunks to
+                    leverage Unity Occlusion Culling and minimize unnecessary
+                    rendering.
+                  </li>
+                  <li>
+                    Improved rendering efficiency to ensure only visible meshes
+                    were rendered, helping stabilize frame rate during
+                    high-speed races.
+                  </li>
+                  <li>
+                    Collaborated with team members using Git within an Agile
+                    development workflow.
+                  </li>
+                </ul>
+
+                <div class="project-tech">
+                  <span>Unity (C#)</span>
+                  <span>Addressables</span>
+                  <span>Occlusion Culling</span>
+                  <span>Performance Optimization</span>
+                </div>
+              </div>
+              <li>Nut Guardian, Stick Man Legend, Sandwich Master</li>
+              <li>Frosty Drill, Space Chasing</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-title">Space Falcon Studio</div>
+            <div class="time">2022 – 2024</div>
+            <ul>
+              <!-- Aviatrix -->
+              <div class="project">
+                <div class="project-header">
+                  <h3 class="project-title">Aviatrix</h3>
+                  <span class="project-role">Game Developer (Unity)</span>
+                </div>
+
+                <ul class="project-desc">
+                  <li>
+                    Developed core gameplay features for an online airplane
+                    shooter game targeting both Mobile and PC platforms.
+                  </li>
+                  <li>
+                    Implemented Object Pooling to manage bullets, enemies, and
+                    visual effects efficiently, reducing runtime allocations and
+                    improving performance.
+                  </li>
+                  <li>
+                    Integrated backend APIs for player login, match results, and
+                    win/lose state synchronization.
+                  </li>
+                  <li>
+                    Handled gameplay flow logic based on server responses,
+                    including match outcome and reward triggering.
+                  </li>
+                  <li>
+                    Optimized gameplay performance to ensure stable frame rates
+                    across different devices and platforms.
+                  </li>
+                  <li>
+                    Collaborated with team members using Git within an Agile
+                    development process.
+                  </li>
+                </ul>
+
+                <div class="project-tech">
+                  <span>Unity (C#)</span>
+                  <span>Online Gameplay</span>
+                  <span>Object Pooling</span>
+                  <span>API Integration</span>
+                  <span>Mobile & PC</span>
+                </div>
+              </div>
+
+              <li>Second Mobile Game</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Freelancing Projects</h2>
+          <ul>
+            <div class="project">
+              <div class="project-header">
+                <h3 class="project-title">HalfWish</h3>
+                <span class="project-role">Game Developer (Unity)</span>
+              </div>
+
+              <ul class="project-desc">
+                <li>
+                  Worked on multiplayer features using Photon, focusing on
+                  client-side gameplay flow and UI integration.
+                </li>
+                <li>
+                  Developed and maintained gameplay UI systems, including
+                  card-based interfaces and player interaction logic.
+                </li>
+                <li>
+                  Implemented card dragging mechanics with smooth visual
+                  feedback and responsive input handling.
+                </li>
+                <li>
+                  Collaborated with networked gameplay logic to ensure UI states
+                  remained synchronized in multiplayer sessions.
+                </li>
+                <li>
+                  Assisted in debugging gameplay and UI issues during
+                  development and playtesting.
+                </li>
+              </ul>
+
+              <div class="project-tech">
+                <span>Unity (C#)</span>
+                <span>Editor Scripting</span>
+                <span>Photon Networking</span>
+              </div>
+            </div>
+            <li>Solar System Simulation</li>
+            <li>Math & Equation Solver</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Học vấn</h2>
+          <div class="item">
+            <div class="item-title">University Of Science</div>
+            <div class="time">2015 – 2019</div>
+            <div>Bachelor Degree</div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- DOWNLOAD PDF -->
+    <div style="text-align: center; margin: 30px">
+      <button id="download-pdf" style="padding: 10px 20px; font-size: 16px">
+        Download CV as PDF
+      </button>
+    </div>
+  </body>
 </html>
