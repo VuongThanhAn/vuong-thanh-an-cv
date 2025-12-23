@@ -3,110 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vương Thành Ân - Game Developer</title>
+  <title>CV - Vương Thành Ân</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- PDF LIB -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <!-- JS -->
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <img src="images/avatar.jpg" alt="Avatar" class="avatar" />
-    <h1>Vương Thành Ân</h1>
-    <p>Game Developer – Ho Chi Minh City, Viet Nam</p>
-    <p><strong>Email:</strong> thanhanforjob@gmail.com | <strong>Phone:</strong> +84 906 462 961</p>
-    <p><em>He/Him</em></p>
-  </header>
 
-  <div class="container">
-    <section>
-      <h2>About</h2>
-      <p>
-        Take advantage of my working skills & experience to become a professional developer and bring a lot of value to my company and customers.
-        I'm very open-minded and I'm very enthusiastic about learning new things as well as from others.
-        I can work in a high pressure environment.
+  <div class="cv">
+    <!-- LEFT COLUMN -->
+    <aside class="left">
+      <img src="images/avatar.jpg" alt="Avatar" class="avatar" />
+
+      <div class="block">
+        <h3>Thông tin cá nhân</h3>
+        <div class="info-item">📞 0906 462 961</div>
+        <div class="info-item">✉️ thanhanforjob@gmail.com</div>
+        <div class="info-item">📍 Hồ Chí Minh, Việt Nam</div>
+      </div>
+
+      <div class="block">
+        <h3>Kỹ năng</h3>
+        <ul class="skills">
+          <li>Game Development</li>
+          <li>Unity (C#), Unreal Engine (C++)</li>
+          <li>Shader Graph, DOTS, ECS</li>
+          <li>API Integration</li>
+          <li>Git, Agile</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Sở thích</h3>
+        <div class="info-item">Du lịch – Fencing – Vẽ</div>
+      </div>
+    </aside>
+
+    <!-- RIGHT COLUMN -->
+    <main class="right">
+      <h1 class="name">Vương Thành Ân</h1>
+      <div class="title">Game Developer</div>
+
+      <p class="summary">
+        Take advantage of my working skills & experience to become a professional developer and bring value to the company.
+        I am open-minded, enthusiastic about learning, and able to work under high pressure.
       </p>
-    </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>2024 - Present: PlayAd:</strong> 
-          <a href="https://play.google.com/store/apps/details?id=com.ngn.nut.guardian&hl=en">Nut Guardian</a>,
-          Racing Master
-          <div class="video-preview">
-            <video width="200" height="200" controls><source src="videos/racing.mp4" type="video/mp4"></video>,
-            <video width="200" height="200" controls><source src="videos/home.mp4" type="video/mp4"></video>,
-          </div>
-          <a href="https://play.google.com/store/apps/details?id=com.sld.stickman.legend&hl=en">Stick Man Legend</a>, 
-          <a href="https://play.google.com/store/apps/details?id=com.smr.sandwich.maker&hl=en">SandWich Master</a>,
-          <a href="https://play.google.com/store/apps/details?id=game.ftd.frosty.drill&hl=en">Frosty Drill</a>,
-          <a href="https://play.google.com/store/apps/details?id=game.spc.space.chasing&hl=en">Space Chasing</a>,
-        </li>
-        <li><strong>2022 - 2024: Space Falcon:</strong> 
-          <a href="https://www.youtube.com/watch?v=KCnvCh2HvuI&list=PLBDRcaZ7spQFxyH4xNzPcxOdYKgAwfWPO">Aviatrix</a>,
-          <a href="https://www.youtube.com/watch?v=tZFtAKZQa9A&list=PLBDRcaZ7spQFxyH4xNzPcxOdYKgAwfWPO&index=15">2nd Game</a>
-        </li>
-        <li><strong>2022 - 2022: Athena:</strong>
-          <a href="https://play.google.com/store/apps/details?id=tile.home.match.puzzle.games&hl=en">Tile Home</a>,
-          <a href="https://play.google.com/store/apps/details?id=game.woody.bubble.shooter.block.puzzle&hl=en">Woodland Bubble</a>
-        </li>
-        <li><strong>2020 - 2022: Healios:</strong> English Education Game
-          <a href="https://play.google.com/store/apps/details?id=com.ptitnightmare.wwv&hl=en">Werewolf Voice</a>,
-          <a href="https://play.google.com/store/apps/details?id=com.blueflame.thelastsurvivor&hl=en">The Last Survival</a>
-        </li>
-        <li><strong>2019 - 2020: Zen Studio:</strong> Drop Balls, Save Daddy, Amaze</li>
-        <li><strong>2018 - 2019: AnGiaArt:</strong> 
-          Walking Simulator Game (Unreal Engine)
-          <div class="project-preview">
-            <img src="images/interior_1.jpg" alt="Walking Simulator Game Preview" width="200">
-            <img src="images/interior_2.jpg" alt="Walking Simulator Game Preview" width="200">
-          </div>
-        </li>
-      </ul>
-    </section>
-    <div class="page-break"></div>
-    <section>
-      <h2>Personal Projects</h2>
-      <ul>
-        <li><strong>Freelancing: </strong></li>
-        <a href="https://playhalfwish.com/">Halfwish</a>
-        <li>Education Program:
+      <div class="section">
+        <h2>Dự án</h2>
+
+        <div class="item">
+          <div class="item-title">PlayAd – Mobile Games</div>
+          <div class="time">2024 – Present</div>
           <ul>
-            <li>Solar System Simulation</li>
-            <li>Light Refraction</li>
-            <li>Math & Equation Solver</li>
-            <li>Plating Chemical Reaction Visualizer</li>
+            <li>Nut Guardian, Racing Master</li>
+            <li>Stick Man Legend, Sandwich Master</li>
+            <li>Frosty Drill, Space Chasing</li>
           </ul>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Game Development</li>
-        <li>Unity (C#), Unreal Engine (C++)</li>
-        <li>Shader Graph, DOTS, ECS, Job System</li>
-        <li>API Integration</li>
-        <li>Lua Scripting, Dependency Injection</li>
-        <li>Version Control (Git), Problem Solving</li>
-        <li>Team Collaboration, Agile Methodologies, English (Intermediate)</li>
-      </ul>
-    </section>
+        </div>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>Bachelor:</strong> University Of Science (2015 — 2019)</p>
-    </section>
+        <div class="item">
+          <div class="item-title">Space Falcon Studio</div>
+          <div class="time">2022 – 2024</div>
+          <ul>
+            <li>Aviatrix</li>
+            <li>Second Mobile Game</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Personal Projects</h2>
+        <ul>
+          <li>Halfwish – Freelancing Project</li>
+          <li>Solar System Simulation</li>
+          <li>Math & Equation Solver</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Học vấn</h2>
+        <div class="item">
+          <div class="item-title">University Of Science</div>
+          <div class="time">2015 – 2019</div>
+          <div>Bachelor Degree</div>
+        </div>
+      </div>
+    </main>
   </div>
 
-    <!-- PDF Download Button -->
-  <div style="text-align: center; margin: 2rem;">
-    <button id="download-pdf" style="padding: 10px 20px; font-size: 16px;">
+  <!-- DOWNLOAD PDF -->
+  <div style="text-align:center; margin: 30px;">
+    <button id="download-pdf" style="padding:10px 20px; font-size:16px;">
       Download CV as PDF
     </button>
   </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
 
 </body>
 </html>

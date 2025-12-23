@@ -1,47 +1,131 @@
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 0;
+/* RESET */
+* {
+  box-sizing: border-box;
 }
 
-header {
-  background: #2c3e50;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
+/* GLOBAL */
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 40px 0;
+  color: #333;
+}
+
+/* CV WRAPPER */
+.cv {
+  max-width: 1000px;
+  margin: auto;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 1200px;
+}
+
+/* LEFT COLUMN */
+.left {
+  background: #f4f6f8;
+  padding: 30px 24px;
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  border: 5px solid #fff;
   object-fit: cover;
-  margin-bottom: 1rem;
+  display: block;
+  margin: 0 auto 20px;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: #fff;
-  padding: 2rem;
+.block {
+  margin-bottom: 28px;
 }
 
-h2 {
-  border-bottom: 2px solid #2c3e50;
-  padding-bottom: 5px;
-  color: #2c3e50;
+.block h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+  border-bottom: 2px solid #cfa24a;
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
+.info-item {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.skills {
+  padding-left: 18px;
+}
+
+.skills li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* RIGHT COLUMN */
+.right {
+  padding: 40px 36px;
+}
+
+.name {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.title {
+  color: #cfa24a;
+  font-size: 18px;
+  margin: 6px 0 20px;
+}
+
+.summary {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 32px;
+}
+
+.section h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.item {
+  margin-bottom: 14px;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.time {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+/* LIST */
 ul {
-  padding-left: 1.2rem;
+  padding-left: 18px;
+  margin: 8px 0;
 }
 
 li {
-  margin-bottom: 0.5rem;
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
+/* LINKS */
 a {
   color: #2980b9;
   text-decoration: none;
@@ -51,7 +135,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* PDF SUPPORT */
 .page-break {
   page-break-before: always;
 }
-
