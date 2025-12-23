@@ -3,19 +3,27 @@ document.getElementById('download-pdf').addEventListener('click', generatePDF);
 function generatePDF() {
   const container = document.querySelector('.cv');
   if (!container) {
-    console.error('CV container not found');
-    return alert("CV content not found");
+    alert("CV content not found");
+    return;
   }
 
   const opt = {
-    margin: 0.5,
+    margin: 0,
     filename: 'VuongThanhAn_CV.pdf',
-    image: { type: 'jpeg', quality: 1 },
+    image: { type: 'jpeg', quality: 0.98 },
     html2canvas: {
       scale: 2,
-      useCORS: true
+      useCORS: true,
+      scrollY: 0
     },
-    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+    jsPDF: {
+      unit: 'mm',
+      format: 'a4',
+      orientation: 'portrait'
+    },
+    pagebreak: {
+      mode: ['avoid-all', 'css']
+    }
   };
 
   html2pdf().set(opt).from(container).save();

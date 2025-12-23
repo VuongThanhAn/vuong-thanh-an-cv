@@ -14,7 +14,7 @@ body {
 
 /* CV WRAPPER */
 .cv {
-  max-width: 1000px;
+  width: 210mm;
   margin: auto;
   background: #fff;
   display: grid;
