@@ -2,7 +2,10 @@ document.getElementById('download-pdf').addEventListener('click', generatePDF);
 
 function generatePDF() {
   const container = document.querySelector('.cv');
-  if (!container) return alert("CV content not found.");
+  if (!container) {
+    console.error('CV container not found');
+    return alert("CV content not found");
+  }
 
   const opt = {
     margin: 0.5,
