@@ -1,0 +1,10 @@
+{
+  "name": "vuong-thanh-an-portfolio",
+  "private": true,
+  "scripts": {
+    "generate-pdf": "node generate-pdf.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  }
+}

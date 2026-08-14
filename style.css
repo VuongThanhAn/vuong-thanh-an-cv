@@ -22,6 +22,56 @@ body {
   min-height: 1200px;
 }
 
+.cv-actions {
+  margin: 16px 0 24px;
+}
+
+.cv-actions a {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #cfa24a;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cv-actions a:hover {
+  text-decoration: none;
+}
+
+/* PDF */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  .cv {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0;
+  }
+
+  .cv-actions {
+    display: none;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
 /* LEFT COLUMN */
 .left {
   background: #f4f6f8;
