@@ -40,36 +40,6 @@ body {
   text-decoration: none;
 }
 
-/* PDF */
-@page {
-  size: A4;
-  margin: 0;
-}
-
-@media print {
-  html,
-  body {
-    width: 210mm;
-    margin: 0;
-    padding: 0;
-    background: #fff;
-  }
-
-  .cv {
-    width: 210mm;
-    margin: 0;
-  }
-
-  .cv-actions {
-    display: none;
-  }
-
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-}
-
 /* LEFT COLUMN */
 .left {
   background: #e4f1ff;
@@ -245,4 +215,113 @@ a:hover {
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f8f8f8;
+}
+
+/* Education uses the same sidebar block layout as Skills and Tools. */
+.education .info-item {
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+@media print {
+  .left,
+  .right {
+    min-width: 0;
+  }
+
+  .section,
+  .project {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
+/* PRINT: shared top alignment, consistent A4 geometry */
+@page {
+  size: A4;
+  margin: 10mm 0 0 0;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  /* Repeated sidebar color only; never used to position the text. */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 84.7mm;
+    height: 287mm;
+    background: #e4f1ff !important;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .cv {
+    display: grid !important;
+    grid-template-columns: 84.7mm minmax(0, 1fr) !important;
+    align-items: start;
+    position: relative !important;
+    width: 210mm !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  /* Both columns start at exactly the same vertical coordinate. */
+  .left {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 30px 24px !important;
+    margin: 0 !important;
+    background: transparent !important;
+  }
+
+  .right {
+    position: relative !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 30px 9.5mm 15mm !important;
+    background: transparent !important;
+  }
+
+  .cv-actions {
+    display: none !important;
+  }
+
+  .item,
+  .project,
+  .block {
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .section h2,
+  .item-title,
+  .project-header,
+  .block h3 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  /* Do not force Freelancing Projects onto a hard-coded page. */
+  .section.freelance-section {
+    break-before: auto !important;
+    page-break-before: auto !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }
