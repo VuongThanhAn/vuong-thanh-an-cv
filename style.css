@@ -1,327 +1,42 @@
-/* RESET */
-* {
-  box-sizing: border-box;
+* { box-sizing: border-box; }
+@page { size: A4; margin: 14mm 16mm; }
+html, body { margin: 0; padding: 0; background: #f2f2f2; color: #222; font-family: Arial, Helvetica, sans-serif; }
+.resume { width: 210mm; min-height: 297mm; margin: 24px auto; padding: 16mm; background: #fff; }
+.header { border-bottom: 2px solid #222; padding-bottom: 12px; margin-bottom: 18px; }
+h1 { margin: 0; font-size: 27px; letter-spacing: .2px; }
+.headline { margin-top: 4px; font-size: 16px; font-weight: 700; }
+.contact { display: flex; flex-wrap: wrap; gap: 5px 18px; margin-top: 9px; font-size: 11.5px; color: #444; }
+a { color: inherit; text-decoration: none; }
+.summary { margin: 12px 0 0; font-size: 11.5px; line-height: 1.48; }
+section { margin: 0 0 17px; }
+h2 { margin: 0 0 10px; padding-bottom: 4px; border-bottom: 1px solid #555; font-size: 15px; text-transform: uppercase; letter-spacing: .55px; }
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; }
+.skills-grid div { break-inside: avoid; }
+.skills-grid strong { font-size: 11px; }
+.skills-grid p { margin: 3px 0 0; font-size: 10.7px; line-height: 1.4; }
+.experience { margin: 0 0 13px; }
+.company-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+h3 { margin: 0; font-size: 13px; }
+time, .company-row span { font-size: 10.5px; color: #555; white-space: nowrap; }
+.role { margin-top: 2px; font-size: 10.5px; font-style: italic; color: #555; }
+.project { margin: 8px 0 10px 10px; break-inside: avoid; }
+.project h4 { margin: 0 0 3px; font-size: 11.5px; }
+.description, .project p { margin: 3px 0; font-size: 10.5px; line-height: 1.4; }
+ul { margin: 4px 0 5px; padding-left: 17px; }
+li { margin: 0 0 3px; font-size: 10.5px; line-height: 1.4; }
+.tags { margin-top: 5px; font-size: 9.5px; color: #555; }
+.compact { margin-top: 6px; margin-bottom: 7px; }
+@media screen and (max-width: 800px) {
+  .resume { width: 100%; min-height: 0; margin: 0; padding: 24px 20px; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .company-row { align-items: flex-start; }
 }
-
-/* GLOBAL */
-body {
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
-  margin: 0;
-  padding: 40px 0;
-  color: #333;
-}
-
-/* CV WRAPPER */
-.cv {
-  width: 210mm;
-  margin: 0 auto;
-  background: #fff;
-  display: grid;
-  grid-template-columns: 320px 1fr;
-}
-
-.cv-actions {
-  margin: 16px 0 24px;
-}
-
-.cv-actions a {
-  display: inline-block;
-  padding: 10px 16px;
-  background: #cfa24a;
-  color: #fff;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cv-actions a:hover {
-  text-decoration: none;
-}
-
-/* LEFT COLUMN */
-.left {
-  background: #e4f1ff;
-  padding: 30px 24px;
-}
-
-.avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 20px;
-}
-
-.block {
-  margin-bottom: 28px;
-}
-
-.block h3 {
-  margin: 0 0 10px;
-  font-size: 18px;
-  color: #333;
-  border-bottom: 2px solid #cfa24a;
-  display: inline-block;
-  padding-bottom: 4px;
-}
-
-.info-item {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: #444;
-}
-
-.skills {
-  padding-left: 18px;
-}
-
-.skills li {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-/* RIGHT COLUMN */
-.right {
-  padding: 40px 36px;
-}
-
-.name {
-  font-size: 34px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.title {
-  color: #cfa24a;
-  font-size: 18px;
-  margin: 6px 0 20px;
-}
-
-.summary {
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-/* SECTIONS */
-.section {
-  margin-bottom: 32px;
-}
-
-.section h2 {
-  font-size: 20px;
-  margin-bottom: 12px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 6px;
-}
-
-.item {
-  margin-bottom: 14px;
-}
-
-.item-title {
-  font-weight: bold;
-}
-
-.time {
-  font-size: 13px;
-  color: #777;
-  margin-bottom: 6px;
-}
-
-/* LIST */
-ul {
-  padding-left: 18px;
-  margin: 8px 0;
-}
-
-li {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-/* LINKS */
-a {
-  color: #2980b9;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* PDF SUPPORT */
-.page-break {
-  page-break-before: always;
-}
-
-.projects {
-  margin-top: 24px;
-}
-
-.section-title {
-  font-size: 18px;
-  font-weight: 700;
-  border-bottom: 2px solid #333;
-  padding-bottom: 6px;
-  margin-bottom: 16px;
-}
-
-.project {
-  margin-bottom: 24px;
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.project-title {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.project-role {
-  font-size: 13px;
-  color: #555;
-  font-style: italic;
-}
-
-.project-desc {
-  margin-top: 8px;
-  padding-left: 18px;
-}
-
-.project-desc li {
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 6px;
-}
-
-.project-tech {
-  margin-top: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.project-tech span {
-  font-size: 12px;
-  padding: 4px 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-}
-
-/* Education uses the same sidebar block layout as Skills and Tools. */
-.education .info-item {
-  line-height: 1.45;
-  overflow-wrap: anywhere;
-}
-
 @media print {
-  .left,
-  .right {
-    min-width: 0;
-  }
-
-  .section,
-  .project {
-    orphans: 3;
-    widows: 3;
-  }
-}
-
-/* PRINT: shared top alignment, consistent A4 geometry */
-@page {
-  size: A4;
-  margin: 10mm 0 0 0;
-}
-
-@media print {
-  html,
-  body {
-    width: 210mm !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #fff !important;
-  }
-
-  /* Repeated sidebar color only; never used to position the text. */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 84.7mm;
-    height: 287mm;
-    background: #e4f1ff !important;
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  .cv {
-    display: grid !important;
-    grid-template-columns: 84.7mm minmax(0, 1fr) !important;
-    align-items: start;
-    position: relative !important;
-    width: 210mm !important;
-    margin: 0 !important;
-    background: transparent !important;
-  }
-
-  /* Both columns start at exactly the same vertical coordinate. */
-  .left {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: auto !important;
-    min-width: 0 !important;
-    padding: 30px 24px !important;
-    margin: 0 !important;
-    background: transparent !important;
-  }
-
-  .right {
-    position: relative !important;
-    width: auto !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    padding: 30px 9.5mm 15mm !important;
-    background: transparent !important;
-  }
-
-  .cv-actions {
-    display: none !important;
-  }
-
-  .item,
-  .project,
-  .block {
-    break-inside: avoid-page;
-    page-break-inside: avoid;
-  }
-
-  .section h2,
-  .item-title,
-  .project-header,
-  .block h3 {
-    break-after: avoid-page;
-    page-break-after: avoid;
-  }
-
-  /* Do not force Freelancing Projects onto a hard-coded page. */
-  .section.freelance-section {
-    break-before: auto !important;
-    page-break-before: auto !important;
-  }
-
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
+  html, body { width: auto; background: #fff; }
+  .resume { width: auto; min-height: 0; margin: 0; padding: 0; }
+  a { text-decoration: none; }
+  /* only small blocks stay whole; big sections must be allowed to split or they leave blank pages */
+  .project, .skills-grid div, .company-row, .role { break-inside: avoid; }
+  h2, h3, h4, .company-row, .role { break-after: avoid; }
+  p, li { orphans: 2; widows: 2; }
 }
