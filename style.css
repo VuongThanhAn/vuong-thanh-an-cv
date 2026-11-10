@@ -26,6 +26,8 @@ ul { margin: 4px 0 5px; padding-left: 17px; }
 li { margin: 0 0 3px; font-size: 10.5px; line-height: 1.4; }
 .tags { margin-top: 5px; font-size: 9.5px; color: #555; }
 .compact { margin-top: 6px; margin-bottom: 7px; }
+.download-pdf { display: inline-block; margin-top: 10px; padding: 6px 14px; border: 1.5px solid #222; border-radius: 4px; font-size: 12px; font-weight: 700; }
+.download-pdf:hover { background: #222; color: #fff; }
 @media screen and (max-width: 800px) {
   .resume { width: 100%; min-height: 0; margin: 0; padding: 24px 20px; }
   .skills-grid { grid-template-columns: 1fr; }
@@ -35,6 +37,7 @@ li { margin: 0 0 3px; font-size: 10.5px; line-height: 1.4; }
   html, body { width: auto; background: #fff; }
   .resume { width: auto; min-height: 0; margin: 0; padding: 0; }
   a { text-decoration: none; }
+  .download-pdf { display: none; }
   /* only small blocks stay whole; big sections must be allowed to split or they leave blank pages */
   .project, .skills-grid div, .company-row, .role { break-inside: avoid; }
   h2, h3, h4, .company-row, .role { break-after: avoid; }
